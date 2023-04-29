@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "56099253389",
+    "project_id": "getmypix-53e94",
+    "storage_bucket": "getmypix-53e94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56099253389:android:5f11d7cc1f6fc35d5386c4",
+        "android_client_info": {
+          "package_name": "com.example.getmypix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "56099253389-u01hd96m5vf0fpp39fq4avietlg5g6b0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.getmypix",
+            "certificate_hash": "5c3bf2f7a8e7f6302696eec617b463d8a84fdef7"
+          }
+        },
+        {
+          "client_id": "56099253389-90195us3su0ahi4qokj5jcpuaccfmb8h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa2ki6U7_2y_nO1gziaRtvL_Jc_maaNMo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "56099253389-90195us3su0ahi4qokj5jcpuaccfmb8h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

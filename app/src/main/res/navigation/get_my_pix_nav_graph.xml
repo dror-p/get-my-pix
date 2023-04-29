@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/get_my_pix_nav_graph"
+    app:startDestination="@id/listFeeds">
+    <fragment
+        android:id="@+id/listFeeds"
+        android:name="com.example.getmypix.ListFeeds"
+        android:label="fragment_list_feeds"
+        tools:layout="@layout/fragment_list_feeds">
+        <action
+            android:id="@+id/action_listFeeds_to_viewFeed"
+            app:destination="@id/viewFeed" />
+        <action
+            android:id="@+id/action_listFeeds_to_createFeed"
+            app:destination="@id/createFeed" />
+        <action
+            android:id="@+id/action_listFeeds_to_removePost"
+            app:destination="@id/removePost" />
+    </fragment>
+    <fragment
+        android:id="@+id/myFeeds"
+        android:name="com.example.getmypix.MyFeeds"
+        android:label="fragment_my_feeds"
+        tools:layout="@layout/fragment_my_feeds">
+        <action
+            android:id="@+id/action_myFeeds_to_createFeed"
+            app:destination="@id/createFeed" />
+        <action
+            android:id="@+id/action_myFeeds_to_viewFeed"
+            app:destination="@id/viewFeed" />
+        <action
+            android:id="@+id/action_myFeeds_to_removePost"
+            app:destination="@id/removePost"
+            app:popUpTo="@id/myFeeds" />
+        <action
+            android:id="@+id/action_myFeeds_self"
+            app:destination="@id/myFeeds" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewFeed"
+        android:name="com.example.getmypix.ViewFeed"
+        android:label="fragment_view_feed"
+        tools:layout="@layout/fragment_view_feed">
+        <action
+            android:id="@+id/action_viewFeed_to_createFeed"
+            app:destination="@id/createFeed" />
+        <argument
+            android:name="post"
+            app:argType="com.example.getmypix.Models.Posts" />
+        <action
+            android:id="@+id/action_viewFeed_to_removePost"
+            app:destination="@id/removePost"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/createFeed"
+        android:name="com.example.getmypix.CreateFeed"
+        android:label="fragment_create_feed"
+        tools:layout="@layout/fragment_create_feed" >
+        <argument
+            android:name="post"
+            app:argType="com.example.getmypix.Models.Posts"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.getmypix.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_myFeeds"
+            app:destination="@id/myFeeds" />
+    </fragment>
+    <dialog
+        android:id="@+id/removePost"
+        android:name="com.example.getmypix.RemovePost"
+        android:label="RemovePost" >
+        <argument
+            android:name="post"
+            app:argType="com.example.getmypix.Models.Posts"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </dialog>
+    <dialog
+        android:id="@+id/removeUser"
+        android:name="com.example.getmypix.RemoveUser"
+        android:label="RemoveUser" />
+    <fragment
+        android:id="@+id/logout"
+        android:name="com.example.getmypix.Logout"
+        android:label="fragment_logout"
+        tools:layout="@layout/fragment_logout" >
+        <action
+            android:id="@+id/action_logout_to_login"
+            app:destination="@id/login"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_logout"
+        app:destination="@+id/logout" />
+    <action android:id="@+id/action_global_listFeeds" app:destination="@id/listFeeds" />
+</navigation>

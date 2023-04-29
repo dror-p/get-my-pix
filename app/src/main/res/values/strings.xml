@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GetMyPix!</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="google_client_id">56099253389-90195us3su0ahi4qokj5jcpuaccfmb8h.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">339696411047190</string>
+    <string name="fb_login_protocol_scheme">fb339696411047190</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
